@@ -1,6 +1,6 @@
 ---
 - name: Show hostname
-  hosts: servers
+  hosts: all
   gather_facts: no
   tasks:
     - name: Get the hostname
