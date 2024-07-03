@@ -1,0 +1,12 @@
+---
+- name: Show hostname
+  hosts: servers
+  gather_facts: no
+  tasks:
+    - name: Get the hostname
+      command: hostname
+      register: result
+
+    - name: Display the hostname
+      debug:
+        msg: "The hostname is {{ result.stdout }}"
